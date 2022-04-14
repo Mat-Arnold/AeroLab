@@ -107,6 +107,7 @@ ax.FontSize = 25;
 for k = 1:n
     name = ['run_',num2str(k*10), '_cm.csv'];
     tempTable = table;
+    tempTable.height_m = height_m(1:length(data_volts{k}))';
     tempTable.volts = data_volts{k};
     tempTable.inH20 = data_inH2o{k};
     tempTable.pa = data_pa{k};
